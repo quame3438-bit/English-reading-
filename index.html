@@ -42,7 +42,7 @@ pairs.addEventListener('dblclick',e=>{let w=e.target.closest('.word');if(w)openD
 // 本机网址收藏夹：按分类自动保存，可编辑、移动、删除。
 const LIB_KEY='bilingual_reader_url_library_v1';
 let lib;
-try{lib=JSON.parse(localStorage.getItem(LIB_KEY)))}catch(e){}
+try{lib=JSON.parse(localStorage.getItem(LIB_KEY))}catch(e){}
 if(!lib||!Array.isArray(lib.categories)||!Array.isArray(lib.items))lib={categories:[{id:'default',name:'默认分类'}],items:[],selected:'default'};
 if(!lib.categories.length)lib.categories=[{id:'default',name:'默认分类'}];
 if(!lib.categories.some(c=>c.id===lib.selected))lib.selected=lib.categories[0].id;
